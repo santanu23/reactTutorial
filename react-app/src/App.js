@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Dropdown, Button, Row, Col, Icon } from 'react-materialize';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+      <Row>
+      <Col s={6}>
+      <Button waves='light'>Add<Icon right>add</Icon></Button>
+      </Col>
+      <Col s={6}>
+      <Button waves='light'>Remove<Icon right>remove</Icon></Button>
+      </Col>
+      </Row> 
+      <Dropdown trigger={
+        <Button>Drop me!</Button>
+      }>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Bye</p>
+      </Dropdown>
       </div>
     );
   }
