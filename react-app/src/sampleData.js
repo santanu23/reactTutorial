@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Card, CardTitle, Dropdown, Button, Row, Col, Icon } from 'react-materialize';
-
-class App extends Component {
-  render() {
-    var sampleReturnData = 
+var sampleReturnData = 
 [
    {      
       "employer":"Tribalscale",
@@ -44,51 +37,3 @@ class App extends Component {
       "image":"http://www.underconsideration.com/brandnew/archives/google_2015_logo_detail.png"
    }
 ];
-    return (
-      <div>
-        <Button floating large className='red' waves='light' icon='add' />
-        <Employers employerList={sampleReturnData}/>
-      </div>
-    );
-  }
-}
-
-class EmployerCard extends Component {
-  render() {
-    return (
-      <div class="card">    
-        <Card className='small'
-          header={
-            <CardTitle image='assets/sample-1.jpg'>
-              Card Title
-            </CardTitle>
-          }
-          actions={[
-            <a href='#'>
-              This is a Link
-            </a>
-          ]}>
-          I am a very simple card.
-        </Card> 
-      </div>
-    );
-  }
-}
-
-class Employers extends Component {
-  render() {
-    var employerCards = [];
-    this.props.employerList.forEach(function(employer) {
-      employerCards.push(
-        <EmployerCard></EmployerCard>);
-    });
-    return ( 
-      <div>
-        {employerCards}
-      </div>
-    );
-  }
-}
-
-
-export default App;
