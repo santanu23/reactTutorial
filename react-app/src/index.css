@@ -4,9 +4,9 @@ body {
   font-family: sans-serif;
 }
 
-.cardContainer {
+/*.cardContainer {
 	display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}
+}*/
